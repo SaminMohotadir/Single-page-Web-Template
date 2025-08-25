@@ -1,0 +1,107 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: hsl(0, 0%, 5%);
+    color: white;
+}
+h1{
+    font-size: 2rem;
+}
+ul {
+    list-style: none; 
+    padding: 0;    
+    margin: 0;      
+    display: flex;  
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+}
+nav {
+    display: flex;
+    background-color: gray;
+    height: 5vh;
+    top: 0;
+    position: fixed;
+    width: 100%; 
+    left: 50%;  
+    transform: translateX(-50%);
+    justify-content: center;
+    padding-top: 2vh;
+}
+nav a:hover{
+    color: lightcyan;
+}
+
+/* ====== Keep desktop look ====== */
+#home, #aboutus, #projects, #contact {
+    text-align: center;
+    width: 90%;       /* use % for scaling, not vh */
+    max-width: 900px; /* desktop max width */
+    background-color: rgb(66, 62, 62);
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 2.5vh 0; /* top/bottom padding for spacing */
+    border-radius: 5px;
+    box-shadow: 0 6px 15px rgba(100, 150, 255, 0.15);
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5vh;  
+}
+
+.card {
+    flex: 0 1 350px;
+    background-color: grey;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(194, 232, 255, 0.7);
+    padding: 1rem;
+}
+.card a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    #home, #aboutus h1, #projects, #contact {
+        width: 95%;
+        padding: 3vh 1rem;
+        margin-top: 5vh;
+    }
+    .card {
+        flex: 1 1 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    #home, #aboutus h1, #projects, #contact {
+        width: 95%;
+        padding: 3vh 1rem;
+        margin-top: 4vh;
+    }
+    .cardContainer {
+        flex-direction: column;
+        gap: 2vh;
+    }
+    .card {
+        flex: 1 1 100%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+footer{
+    margin-top: 10px;
+    border-top: 2px solid rgb(44, 44, 44);
+    text-align: center;
+}
