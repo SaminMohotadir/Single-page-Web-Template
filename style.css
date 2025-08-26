@@ -36,15 +36,15 @@ nav a:hover{
     color: lightcyan;
 }
 
-/* ====== Keep desktop look ====== */
-#home, #aboutus, #projects, #contact {
+
+#home h1, #aboutus h1, #projects h1, #contact h1 {
     text-align: center;
-    width: 90%;       /* use % for scaling, not vh */
-    max-width: 900px; /* desktop max width */
+    width: 90%;  
+    max-width: 900px;
     background-color: rgb(66, 62, 62);
     margin: 0 auto;
     margin-top: 5vh;
-    padding: 2.5vh 0; /* top/bottom padding for spacing */
+    padding: 2.5vh 0; 
     border-radius: 5px;
     box-shadow: 0 6px 15px rgba(100, 150, 255, 0.15);
 }
@@ -70,8 +70,31 @@ nav a:hover{
     color: white;
     text-decoration: none;
     font-weight: 300;
+    transition: color 0.3ms ease;
+    font-style: normal;
 }
-
+.card a:hover{
+    color: aliceblue;
+}
+.card button{
+    width: 150px;
+    height: fit-content;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background-color: grey;
+    color: white;
+    border: none;
+    box-shadow: 0px 1px 8px black;
+    transition: all 0.3s ease-in-out;
+}
+.card button:hover {
+    background: hsl(0, 0%, 60%);
+    color: rgb(224, 241, 255);
+}
+.card strong{
+    font-weight: 500;
+    font-style: normal;
+}
 @media (max-width: 768px) {
     #home, #aboutus h1, #projects, #contact {
         width: 95%;
